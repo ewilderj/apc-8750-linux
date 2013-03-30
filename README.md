@@ -48,10 +48,12 @@ Notes about the kernel config
 * By default CONFIG_ANDROID_PARANOID_NETWORK was set, I've turned this off. Otherwise most non-root network services won't run.
 
 
-Getting Ralink RT5370 wifi dongle to work
-=========================================
+Getting Ralink RT5370 wifi chipset to work
+==========================================
 
-This is one of the recommended dongles from APC, but it won't just work with the drivers supplied in the kernel.
+This is one of the recommended dongles from APC, but it won't work with the drivers supplied in the kernel,
+and the vendor supplied drivers don't compile against APC's ancient kernel.
+
 To make it work, you must do two things. Ensure the firmware-ralink package is installed, and then download and
 compile the drivers from the compat-drivers project: https://backports.wiki.kernel.org/
 
